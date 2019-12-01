@@ -1,0 +1,4 @@
+{
+  "title": "inline loader scope works es",
+  "dynamic": "transloco {{value}}"
+}

@@ -13,7 +13,11 @@ const routes: Routes = [{
     {
       path: 'scope',
       loadChildren: () => import('./scope/scope.module').then(({ScopeModule}) => ScopeModule)
-    }
+    },
+    {
+      path: 'inline-scope',
+      loadChildren: () => import('./inline-scope/inline-scope.module').then(({InlineScopeModule}) => InlineScopeModule)
+    },
   ]
 }];
 
