@@ -5,7 +5,8 @@
   "scripts": {
     "ng": "ng",
     "nx": "nx",
-    "start": "ng serve",
+    "start": "ng serve --port 4300",
+    "server": "ng serve translations",
     "build": "ng build",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",

@@ -19,6 +19,12 @@
     },
     "api-interfaces": {
       "tags": []
+    },
+    "core": {
+      "tags": []
+    },
+    "translations": {
+      "tags": []
     }
   }
 }

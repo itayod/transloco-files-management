@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { FromServerModule } from './from-server/from-server.module';
 
 
 const routes: Routes = [{
@@ -17,6 +18,10 @@ const routes: Routes = [{
     {
       path: 'inline-scope',
       loadChildren: () => import('./inline-scope/inline-scope.module').then(({InlineScopeModule}) => InlineScopeModule)
+    },
+    {
+      path: 'from-server',
+      loadChildren: () => import('./from-server/from-server.module').then(({FromServerModule}) => FromServerModule)
     },
   ]
 }];
