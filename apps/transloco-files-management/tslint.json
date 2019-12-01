@@ -1,0 +1,17 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "translocoFilesManagement",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "transloco-files-management",
+      "kebab-case"
+    ]
+  }
+}

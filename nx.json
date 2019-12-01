@@ -1,0 +1,24 @@
+{
+  "npmScope": "transloco-files-management",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "transloco-files-management-e2e": {
+      "tags": []
+    },
+    "transloco-files-management": {
+      "tags": []
+    },
+    "api": {
+      "tags": []
+    },
+    "api-interfaces": {
+      "tags": []
+    }
+  }
+}
