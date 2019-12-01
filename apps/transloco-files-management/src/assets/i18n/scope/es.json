@@ -1,0 +1,4 @@
+{
+  "title": "scope works es",
+  "dynamic": "transloco {{value}}"
+}

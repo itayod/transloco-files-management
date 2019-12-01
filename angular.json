@@ -5,7 +5,7 @@
       "projectType": "application",
       "schematics": {
         "@nrwl/angular:component": {
-          "style": "styl"
+          "style": "scss"
         }
       },
       "root": "apps/transloco-files-management",
@@ -25,7 +25,10 @@
               "apps/transloco-files-management/src/favicon.ico",
               "apps/transloco-files-management/src/assets"
             ],
-            "styles": ["apps/transloco-files-management/src/styles.styl"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/transloco-files-management/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -97,117 +100,6 @@
             "jestConfig": "apps/transloco-files-management/jest.config.js",
             "tsConfig": "apps/transloco-files-management/tsconfig.spec.json",
             "setupFile": "apps/transloco-files-management/src/test-setup.ts"
-          }
-        }
-      }
-    },
-    "transloco-files-management-e2e": {
-      "root": "apps/transloco-files-management-e2e",
-      "sourceRoot": "apps/transloco-files-management-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/transloco-files-management-e2e/cypress.json",
-            "tsConfig": "apps/transloco-files-management-e2e/tsconfig.e2e.json",
-            "devServerTarget": "transloco-files-management:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "transloco-files-management:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "apps/transloco-files-management-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/transloco-files-management-e2e/**"
-            ]
-          }
-        }
-      }
-    },
-    "api": {
-      "root": "apps/api",
-      "sourceRoot": "apps/api/src",
-      "projectType": "application",
-      "prefix": "api",
-      "schematics": {},
-      "architect": {
-        "build": {
-          "builder": "@nrwl/node:build",
-          "options": {
-            "outputPath": "dist/apps/api",
-            "main": "apps/api/src/main.ts",
-            "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": ["apps/api/src/assets"]
-          },
-          "configurations": {
-            "production": {
-              "optimization": true,
-              "extractLicenses": true,
-              "inspect": false,
-              "fileReplacements": [
-                {
-                  "replace": "apps/api/src/environments/environment.ts",
-                  "with": "apps/api/src/environments/environment.prod.ts"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@nrwl/node:execute",
-          "options": {
-            "buildTarget": "api:build"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "apps/api/tsconfig.app.json",
-              "apps/api/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!apps/api/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "apps/api/jest.config.js",
-            "tsConfig": "apps/api/tsconfig.spec.json"
-          }
-        }
-      }
-    },
-    "api-interfaces": {
-      "root": "libs/api-interfaces",
-      "sourceRoot": "libs/api-interfaces/src",
-      "projectType": "library",
-      "schematics": {},
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/api-interfaces/tsconfig.lib.json",
-              "libs/api-interfaces/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/api-interfaces/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/api-interfaces/jest.config.js",
-            "tsConfig": "libs/api-interfaces/tsconfig.spec.json"
           }
         }
       }
