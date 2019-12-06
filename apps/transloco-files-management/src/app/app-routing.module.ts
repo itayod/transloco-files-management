@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FromServerModule } from './from-server/from-server.module';
-
 
 const routes: Routes = [{
   path: '',
@@ -21,7 +19,13 @@ const routes: Routes = [{
     },
     {
       path: 'from-server',
-      loadChildren: () => import('./from-server/from-server.module').then(({FromServerModule}) => FromServerModule)
+      loadChildren: () =>
+        import('./from-server/from-server.module').then(({FromServerModule}) => FromServerModule)
+    },
+    {
+      path: 'from-eager-lib',
+      loadChildren: () =>
+        import('./from-eager-lib/from-eager-lib.module').then(({FromEagerLibModule}) => FromEagerLibModule)
     },
   ]
 }];

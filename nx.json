@@ -8,22 +8,13 @@
     "nx.json": "*"
   },
   "projects": {
-    "transloco-files-management-e2e": {
-      "tags": []
-    },
     "transloco-files-management": {
       "tags": []
     },
-    "api": {
-      "tags": []
-    },
-    "api-interfaces": {
-      "tags": []
-    },
-    "core": {
-      "tags": []
-    },
     "translations": {
+      "tags": []
+    },
+    "eager-translations": {
       "tags": []
     }
   }

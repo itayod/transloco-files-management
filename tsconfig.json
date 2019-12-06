@@ -2,6 +2,8 @@
   "compileOnSave": false,
   "compilerOptions": {
     "rootDir": ".",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
@@ -18,6 +20,10 @@
     "paths": {
       "@transloco-files-management/api-interfaces": [
         "libs/api-interfaces/src/index.ts"
+      ],
+      "@transloco-files-management/ui": ["libs/ui/src/index.ts"],
+      "@transloco-files-management/eager-translations": [
+        "libs/eager-translations/src/index.ts"
       ]
     }
   },

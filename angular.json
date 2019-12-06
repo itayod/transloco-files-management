@@ -104,40 +104,6 @@
         }
       }
     },
-    "core": {
-      "projectType": "library",
-      "root": "libs/core",
-      "sourceRoot": "libs/core/src",
-      "prefix": "transloco-files-management",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/core/tsconfig.lib.json",
-              "libs/core/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/core/**"
-            ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/core/jest.config.js",
-            "tsConfig": "libs/core/tsconfig.spec.json",
-            "setupFile": "libs/core/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "scss"
-        }
-      }
-    },
     "translations": {
       "root": "apps/translations",
       "sourceRoot": "apps/translations/src",
@@ -151,9 +117,7 @@
             "outputPath": "dist/apps/translations",
             "main": "apps/translations/src/main.ts",
             "tsConfig": "apps/translations/tsconfig.app.json",
-            "assets": [
-              "apps/translations/src/assets"
-            ]
+            "assets": ["apps/translations/src/assets"]
           },
           "configurations": {
             "production": {
@@ -182,10 +146,7 @@
               "apps/translations/tsconfig.app.json",
               "apps/translations/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/translations/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/translations/**"]
           }
         },
         "test": {
@@ -194,6 +155,37 @@
             "jestConfig": "apps/translations/jest.config.js",
             "tsConfig": "apps/translations/tsconfig.spec.json"
           }
+        }
+      }
+    },
+    "eager-translations": {
+      "projectType": "library",
+      "root": "libs/eager-translations",
+      "sourceRoot": "libs/eager-translations/src",
+      "prefix": "transloco-files-management",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/eager-translations/tsconfig.lib.json",
+              "libs/eager-translations/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/eager-translations/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/eager-translations/jest.config.js",
+            "tsConfig": "libs/eager-translations/tsconfig.spec.json",
+            "setupFile": "libs/eager-translations/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
         }
       }
     }

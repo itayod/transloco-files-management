@@ -5,9 +5,10 @@
                [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="scope">Scope</a>
-      <a mat-list-item href="inline-scope">Inline Loader Scope</a>
-      <a mat-list-item href="from-server">From Server</a>
+      <a mat-list-item routerLink="scope">Scope</a>
+      <a mat-list-item routerLink="inline-scope">Inline Loader Scope</a>
+      <a mat-list-item routerLink="from-server">From Server</a>
+      <a mat-list-item routerLink="from-eager-lib">From Eager Library</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
