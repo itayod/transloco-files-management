@@ -24,6 +24,9 @@
       "@transloco-files-management/ui": ["libs/ui/src/index.ts"],
       "@transloco-files-management/eager-translations": [
         "libs/eager-translations/src/index.ts"
+      ],
+      "@transloco-files-management/scoped-library": [
+        "libs/scoped-library/src/index.ts"
       ]
     }
   },

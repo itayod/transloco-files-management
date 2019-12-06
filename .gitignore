@@ -37,3 +37,5 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+/apps/transloco-files-management/src/assets/i18n/lazy-translations

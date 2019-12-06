@@ -27,6 +27,11 @@ const routes: Routes = [{
       loadChildren: () =>
         import('./from-eager-lib/from-eager-lib.module').then(({FromEagerLibModule}) => FromEagerLibModule)
     },
+    {
+      path: 'from-scoped-lib',
+      loadChildren: () =>
+        import('./from-scoped-lib/from-scoped-lib.module').then(({FromScopedLibModule}) => FromScopedLibModule)
+    },
   ]
 }];
 

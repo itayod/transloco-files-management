@@ -16,6 +16,9 @@
     },
     "eager-translations": {
       "tags": []
+    },
+    "scoped-library": {
+      "tags": []
     }
   }
 }
